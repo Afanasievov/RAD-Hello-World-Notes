@@ -1,0 +1,21 @@
+{
+    "name": "hello-world",
+    "application": null,
+    "libs": {},
+    "view": {
+        "screen_1": "/source/views/screen_1",
+        "screen_2": "/source/views/screen_2"
+    },
+    "model": {
+        "list": "/source/models/list"
+    },
+    "service": {},
+    "screen": {},
+    "external": {},
+    "links": {},
+    "scrollable": {
+        "view": "/source/views/view",
+        "screen_2": "/source/views/screen_2",
+        "screen_3": "/source/views/screen_3"
+    }
+}
