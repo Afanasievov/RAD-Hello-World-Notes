@@ -1,1 +1,1 @@
-RAD.model('list', Backbone.collection);
+RAD.model('list', Backbone.Collection);

@@ -12,7 +12,6 @@ RAD.view("view.screen_2", RAD.Blanks.View.extend({
         'tap .switch-to'    : 'switchTo',
         'tap .go-back'      : 'goBack',
         'tap .go-forward'   : 'goForward'
-
     },
     tabs: [
         'view.screen_2_tab_1',

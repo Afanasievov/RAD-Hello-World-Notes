@@ -4,6 +4,10 @@
     
     var scripts = [
         
+        "source/models/list.js",
+        
+        "source/views/popup/popup.js",
+        
         "source/views/screen_1/screen_1.js",
         
         "source/views/screen_2/screen_2.js",
@@ -23,8 +27,14 @@
                 defaultBackstack: false,
                 defaultAnimation: 'none',
                 animationTimeout: 3000,
-                debug: false
+                debug: false,
+                templateSettings: {
+                evaluate    : /<%([\s\S]+?)%>/g,
+                interpolate : /<%=([\s\S]+?)%>/g,
+                escape      : /<%-([\s\S]+?)%>/g
+                }
             };
+
 
         //initialize core by new application object
         core.initialize(application, coreOptions);

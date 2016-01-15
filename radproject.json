@@ -4,7 +4,8 @@
     "libs": {},
     "view": {
         "screen_1": "/source/views/screen_1",
-        "screen_2": "/source/views/screen_2"
+        "screen_2": "/source/views/screen_2",
+        "popup": "/source/views/popup"
     },
     "model": {
         "list": "/source/models/list"
