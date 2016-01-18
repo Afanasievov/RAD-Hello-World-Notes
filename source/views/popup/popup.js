@@ -29,16 +29,15 @@ RAD.view("view.popup", RAD.Blanks.View.extend({
         "use strict";
 
         var field = this.el.querySelector('#content'),
-            noteText = field.value;
+            noteText = field.value,
+            createDate = new Date().toLocaleString();
 
         e.preventDefault();
 
         if (noteText) {
-            this.model.unshift({content: noteText});
+            this.model.unshift({content: noteText, createDate: createDate});
             field.value = '';
         }
-
-        console.log(this.model);
 
         this.publish('navigation.popup.close', {content: this.viewID });
     }

@@ -21,26 +21,14 @@ RAD.view("view.screen_2_tab_2", RAD.Blanks.ScrollableView.extend({
         }
         console.log(this.model);
     },
-    //onInitialize: function () {
-    //    "use strict";
-    //    this.model = RAD.model('list');
-    //},
-    //onReceiveMsg: function (channel, data) {
-    //"use strict";
-    ////this.$el.find('.msg').html(data);
-    //},
+
     showPopup: function (e) {
         "use strict";
 
         var self = this,
             options = document.forms['popup-options'],
-            //gravity = options.querySelector('[name=gravity]:checked').value,
-            //outsideToClose = options.querySelector('[name=autoclose]').checked,
             targetID = e.currentTarget.getAttribute('data-target'),
-            target = targetID ? this.el.querySelector('#'+targetID) : e.currentTarget,
-            msg;
-
-        //msg = document.getElementById("content").value;
+            target = targetID ? this.el.querySelector('#'+targetID) : e.currentTarget;
 
         this.publish('navigation.popup.show', {
             content: "view.popup",
@@ -54,5 +42,12 @@ RAD.view("view.screen_2_tab_2", RAD.Blanks.ScrollableView.extend({
                 parent: self.viewID
             }
         });
+
+    },
+
+    removeFromList: function(e) {
+        "use strict";
+        var index = e.currentTarget.getAttribute('data-index');
+        this.model.remove(this.model.at(index));
     }
 }));
