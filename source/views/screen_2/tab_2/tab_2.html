@@ -1,22 +1,20 @@
-<div class="center extra-margin">
-    <button class="topcoat-button--cta popup-show">Add note</button>
-</div>
+<div class="content">
 
-<h3 class="topcoat-list__header" data-template="true">Notes (<%= model.length %>):</h3>
-
-<div class="scroll-view">
-    <div class="scroll-view-body">
-        <ul data-template="true" class="topcoat-list">
-            <% _.each(model, function(task, index) { %>
-            <li class="topcoat-list__item">
-                <p><%= task.createDate %></p>
-                <span class="label"><%= task.content %></span>
-            <span class="remove-icon" data-index="<%= index %>">
-                <i class="fa fa-minus-square-o"></i>
-            </span>
-            </li>
-            <% }); %>
-        </ul>
+    <div class="center extra-margin">
+        <button class="topcoat-button--cta popup-show-add">Add note</button>
     </div>
-</div>
+    <h3 class="topcoat-list__header" data-template="true">Notes (<%= model.length %>):</h3>
+    <h3 class="topcoat-list__header">Long tap on a note to edit it.</h3>
+
+    <ul data-template="true" class="topcoat-list">
+        <% _.each(model, function(task, index) { %>
+        <li class="topcoat-list__item">
+            <p><%= task.createDate %></p>
+            <span class="label" data-index="<%= index %>"><%= task.content %></span>
+            <p class="remove-icon right" data-index="<%= index %>">
+                <i class="fa fa-minus-square-o"></i>
+            </p>
+        </li>
+        <% }); %>
+    </ul>
 </div>
