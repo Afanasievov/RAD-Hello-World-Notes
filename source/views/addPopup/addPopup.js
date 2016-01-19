@@ -1,4 +1,4 @@
-RAD.view("view.popup", RAD.Blanks.View.extend({
+RAD.view("view.addPopup", RAD.Blanks.View.extend({
 
     url: 'source/views/addPopup/addPopup.html',
     events: {
@@ -10,12 +10,10 @@ RAD.view("view.popup", RAD.Blanks.View.extend({
     },
     onInitialize: function () {
         'use strict';
-        //this.model = new Backbone.Model();
         this.model = RAD.model('list');
     },
     onNewExtras: function (extras) {
         'use strict';
-        //this.model.set({msg: extras.msg});
         this.caller = extras.parent;
     },
     onEndDetach: function () {
