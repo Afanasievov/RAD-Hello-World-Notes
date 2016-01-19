@@ -6,7 +6,9 @@
         
         "source/models/list.js",
         
-        "source/views/popup/popup.js",
+        "source/views/addPopup/addPopup.js",
+        
+        "source/views/editPopup/editPopup.js",
         
         "source/views/screen_1/screen_1.js",
         

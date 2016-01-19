@@ -9,14 +9,13 @@ RAD.view("view.screen_2", RAD.Blanks.View.extend({
     ],
     events: {
         'tap .logout'       : 'logout',
-        'tap .switch-to'    : 'switchTo',
-        'tap .go-back'      : 'goBack',
-        'tap .go-forward'   : 'goForward'
+        'tap .switch-to'    : 'switchTo'
     },
     tabs: [
         'view.screen_2_tab_1',
         'view.screen_2_tab_2'
     ],
+
     logout: function () {
         "use strict";
         this.application.logout();
@@ -29,7 +28,6 @@ RAD.view("view.screen_2", RAD.Blanks.View.extend({
             activeTabIndex = $allTabs.index($activeTab),
             selectedTabIndex = $allTabs.index($selectedTab),
             animation;
-        //console.log($selectedTab, $allTabs, $activeTab, activeTabIndex);
 
         if (activeTabIndex === selectedTabIndex) {
             return;
@@ -43,8 +41,7 @@ RAD.view("view.screen_2", RAD.Blanks.View.extend({
         this.publish('navigation.show', {
             container_id: '#inner',
             content: this.tabs[selectedTabIndex],
-            animation: animation,
-            backstack: true
+            animation: animation
         })
     }
 }));

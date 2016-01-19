@@ -12,12 +12,13 @@ RAD.application(function (core) {
 
     };
 
-    app.login = function () {
+    app.login = function (userData) {
         var options = {
             container_id: '#screen',
             content     : "view.screen_2",
-            backstack   : true
+            animation: 'slide-in'
         };
+        options.extras = userData;
         core.publish('navigation.show', options);
 
     };
@@ -25,8 +26,8 @@ RAD.application(function (core) {
     app.logout = function () {
         core.publish('navigation.show', {
             container_id: '#screen',
-            content     : 'view.screen_1'
-            //animation   : 'animation'
+            content     : 'view.screen_1',
+            animation: 'slide-out'
         })
     };
 
